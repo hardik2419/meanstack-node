@@ -3,29 +3,25 @@
   </div>
   <form [formGroup]="userForm" (ngSubmit)="onFormSubmit(userForm.value)">
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="firstName" formControlName="firstName"
-             [errorStateMatcher]="matcher">
+      <input matInput placeholder="firstName" formControlName="firstName">
       <mat-error>
         <span *ngIf="!userForm.get('firstName').valid && userForm.get('firstName').touched">Please enter firstName</span>
       </mat-error>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="lastName" formControlName="lastName"
-             [errorStateMatcher]="matcher">
+      <input matInput placeholder="lastName" formControlName="lastName">
       <mat-error>
         <span *ngIf="!userForm.get('lastName').valid && userForm.get('lastName').touched">Please enter user lastName</span>
       </mat-error>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput type="email" placeholder="email" formControlName="email"
-               [errorStateMatcher]="matcher">
+        <input matInput type="email" placeholder="email" formControlName="email">
         <mat-error>
           <span *ngIf="!userForm.get('email').valid && userForm.get('email').touched">Please enter user email</span>
         </mat-error>
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <input matInput type="number"  placeholder="phone" formControlName="phone"
-               [errorStateMatcher]="matcher">
+        <input matInput type="number"  placeholder="phone" formControlName="phone">
         <mat-error>
           <span *ngIf="!userForm.get('phone').valid && userForm.get('phone').touched">Please enter phone</span>
         </mat-error>

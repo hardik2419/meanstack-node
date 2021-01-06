@@ -10,7 +10,7 @@ import { ApiService } from '../api.service';
 })
 export class DetailsUserComponent implements OnInit {
 
-    user = {};
+    user:any;
     imageUrl = environment.imageUrl
     constructor(private route: ActivatedRoute, private api: ApiService, private router: Router) { }
 

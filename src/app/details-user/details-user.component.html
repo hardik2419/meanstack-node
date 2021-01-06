@@ -3,21 +3,21 @@
   </div>
   <mat-card class="example-card">
     <mat-card-header>
-      <mat-card-title><h2>{{user.firstName}} {{user.lastName}}</h2></mat-card-title>
-      <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
+      <mat-card-title><h2>{{user?.firstName}} {{user?.lastName}}</h2></mat-card-title>
+      <mat-card-subtitle>{{user?.email}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <dl>
         <dt>Email:</dt>
-        <dd>{{user.email}}</dd>
+        <dd>{{user?.email}}</dd>
         <dt>phone:</dt>
-        <dd>{{user.phone}}</dd>
+        <dd>{{user?.phone}}</dd>
         <dt>Image:</dt>
-        <dd><img src="{{ imageUrl }}{{user.image}}" width="50"> </dd>
+        <dd><img src="{{ imageUrl }}{{user?.image}}" width="50"> </dd>
       </dl>
     </mat-card-content>
     <mat-card-actions>
-      <a mat-raised-button color="primary" [routerLink]="['/user-edit', user._id]"><mat-icon>edit</mat-icon></a>
-      <a mat-raised-button color="warn" (click)="deleteuser(user._id)"><mat-icon>delete</mat-icon></a>
+      <a mat-raised-button color="primary" [routerLink]="['/user-edit', user?._id]"><mat-icon>edit</mat-icon></a>
+      <a mat-raised-button color="warn" (click)="deleteuser(user?._id)"><mat-icon>delete</mat-icon></a>
     </mat-card-actions>
   </mat-card>
